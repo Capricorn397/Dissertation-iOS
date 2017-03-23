@@ -7,25 +7,34 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var answerBox: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var sentLabel: UILabel!
+    var qID:NSString?
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        questionLabel.text = detailItem
+        sentLabel.isHidden = true
         self.configureView()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+
+    @IBAction func doneEnd(_ sender: Any) {
+        view.endEditing(true)
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,13 +42,31 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: NSDate? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
+    
+    
+    @IBAction func sendPressed(_ sender: UIButton) {
+        let post_headers = ["qid": qID as! String,
+                            "uid": "iOSTestApp"]
+        if (answerBox.text == nil) {
+            answerBox.placeholder = "Enter Answer First"
+        } else {
+            let parameters = ["answer": answerBox.text!]
+            Alamofire.request("http://217.182.64.177:8000/answerin", method: .post, parameters: parameters, encoding: JSONEncoding.default,  headers: post_headers)
+                .response { response in
+                    let data = response.data
+                    if data != nil {
+                        self.sentLabel.isHidden = false
+                    }
+            }
 
+        }
+    }
 
 }
 
