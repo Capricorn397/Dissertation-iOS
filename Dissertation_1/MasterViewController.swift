@@ -100,7 +100,6 @@ class MasterViewController: UITableViewController {
                 controller.detailItem = object as? String
                 let point = quest_dict.endIndex - 1
                 controller.qID = quest_dict[point - indexPath.row]["id"] as! NSString?
-                print(quest_dict[point - indexPath.row]["id"] as! NSString?)
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
