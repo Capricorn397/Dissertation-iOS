@@ -51,6 +51,7 @@ class DetailViewController: UIViewController {
     
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        print(qID)
         let post_headers = ["qid": qID as! String,
                             "uid": "iOSTestApp"]
         if (answerBox.text == nil) {

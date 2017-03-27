@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
             // Enable or disable features based on authorization.
         }
+        UIApplication.shared.applicationIconBadgeNumber = 0
         if defaults.integer(forKey: "firstRun") != 2 {
             print("Setting to 1")
             defaults.set(1, forKey: "firstRun")
@@ -45,10 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

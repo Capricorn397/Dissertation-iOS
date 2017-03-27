@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ADCEA3FB1B89656D45D5C8BE90ECF213B7335CA7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ADCEA3FB1B89656D45D5C8BE90ECF213B7335CA7" : 9223372036854775807,
+    "685F09C031C3C03F39352DF51B736E970CE06795" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E7BC2DBA-030B-4B44-A248-369F25A17F63",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ADCEA3FB1B89656D45D5C8BE90ECF213B7335CA7" : "Dissertation_1\/",
+    "685F09C031C3C03F39352DF51B736E970CE06795" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Dissertation_1",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Dissertation_1.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Capricorn397\/Dissertation-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "685F09C031C3C03F39352DF51B736E970CE06795"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Capricorn397\/Dissertation-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ADCEA3FB1B89656D45D5C8BE90ECF213B7335CA7"
+    }
+  ]
+}

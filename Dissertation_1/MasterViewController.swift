@@ -98,7 +98,9 @@ class MasterViewController: UITableViewController {
                 let object = objects[indexPath.row];
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object as? String
-                controller.qID = quest_dict[indexPath.row]["id"] as! NSString?
+                let point = quest_dict.endIndex - 1
+                controller.qID = quest_dict[point - indexPath.row]["id"] as! NSString?
+                print(quest_dict[point - indexPath.row]["id"] as! NSString?)
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
