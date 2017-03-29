@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             Alamofire.request("http://217.182.64.177:8000/register", method: .post, encoding: JSONEncoding.default,  headers: post_headers)
                 .response { response in
                     let data = response.data
-                    print(data!)
+                    print(data as Any)
                     }
     }
 
