@@ -65,7 +65,7 @@ class MasterViewController: UITableViewController {
     var valueToPassID = String.self
     var valueToPassQ = String.self
 
-    func insertNewObject(_ sender: Any) {
+    @objc func insertNewObject(_ sender: Any) {
         if defaults.integer(forKey: "firstRun") == 1 {
             checkMod()
         }

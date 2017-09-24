@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
     @IBAction func doneEnd(_ sender: Any) {
         view.endEditing(true)
     }
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 
